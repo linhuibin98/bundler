@@ -4,12 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "tsup ./src/rollup.ts --format cjs,esm --dts --clean --watch",
+    "build": "tsup ./src/rollup.ts --format cjs,esm --dts --clean --minify",
     "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@linhuibin/eslint-config": "^0.0.4",
+    "@types/node": "^18.11.3",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4",
     "vitest": "^0.24.3"
+  },
+  "dependencies": {
+    "magic-string": "^0.26.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@linhuibin/eslint-config"
+    ]
   }
 }
